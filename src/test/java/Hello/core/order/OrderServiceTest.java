@@ -1,8 +1,10 @@
 package Hello.core.order;
 
 import Hello.core.AppConfig;
+import Hello.core.discount.FixDiscountPolicy;
 import Hello.core.member.Member;
 import Hello.core.member.MemberService;
+import Hello.core.member.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,4 +34,5 @@ public class OrderServiceTest {
 
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
+
 }
